@@ -1,0 +1,10 @@
+{
+    "name": "container",
+    "version": "0.0.1",
+    "dependencies": {
+        "base": "http://localhost/e2e/registry/base-0.0.1.tgz",
+        "app1": "http://localhost/e2e/registry/app1-0.0.1.tgz",
+        "app2": "http://localhost/e2e/registry/app2-0.0.1.tgz",
+        "launcher": "http://localhost/e2e/registry/launcher-0.0.1.tgz"
+    }
+}

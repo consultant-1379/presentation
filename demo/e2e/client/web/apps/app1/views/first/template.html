@@ -1,0 +1,24 @@
+<div>
+    <form class="app1-Form" data-widget="./../../widgets/form/form">
+        <span class="app1-Form-Inputs" style="display: none;">
+            <input type="text" id="column1" class="input-large" placeholder="Column 1">
+            <input type="text" id="column2" class="input-large" placeholder="Column 2">
+            <input type="text" id="column3" class="input-large" placeholder="Column 3">
+        </span>
+        <span data-action="showAdd">
+            <button class="btn btn-add btn_color_green app1-Form-ShowAdd"><span class="btn-add-icon"></span>Add</button>
+        </span>
+        <span data-action="addNew" style="display: none;">
+            <button class="btn btn_color_green app1-Form-AddNew"><span class="btn-save-icon"></span>Add</button>
+            <button class="btn app1-Form-HideAdd"><span class="btn-cancel-icon"></span>Cancel</button>
+        </span>
+        <span data-action="edit" style="display: none;">
+            <button type="submit" class="btn btn_color_green app1-Form-Save"><span class="btn-save-icon"></span>Save</button>
+            <button class="btn app1-Form-HideSave"><span class="btn-cancel-icon"></span>Cancel</button>
+        </span>
+    </form>
+    <div>
+        <div data-name="settings" data-widget="./../../widgets/settings/settings" data-settings="rest/ui/settings/apps/app1/widgets/table1" data-collection="rest/messages"></div>
+    </div>
+    <div data-name="table" data-widget="./../../widgets/table/table" data-settings="rest/ui/settings/apps/app1/widgets/table1" data-collection="rest/messages"></div>
+</div>

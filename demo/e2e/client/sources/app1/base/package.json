@@ -1,0 +1,23 @@
+{
+  "name": "base",
+  "version": "0.0.1",
+  "dependencies": {},
+  "_npmUser": {
+    "name": "admin",
+    "email": "esadtom@ericsson.com"
+  },
+  "_id": "base@0.0.1",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "1.1.24",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "cf2a9aa8a0dcc60e686dbe94c738a0c9b38e9eff"
+  },
+  "_from": "base@http://10.45.18.221/registry/_design/scratch/_rewrite/base/-/base-0.0.1.tgz"
+}

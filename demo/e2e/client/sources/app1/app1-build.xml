@@ -1,0 +1,44 @@
+<project>
+    <target name="install-dependencies">
+        <delete dir="base"/>
+        <delete dir="node_modules"/>
+        <exec executable="npm.cmd" dir=".">
+            <arg line="install"/>
+        </exec>
+        <move todir=".">
+            <fileset dir="node_modules"/>
+        </move>
+        <delete dir="node_modules"/>
+    </target>
+    <target name="test-qunit">
+        <exec executable="phantomjs" dir="test">
+            <arg line="qunit/runner.js"/>
+            <arg line="index.html"/>
+        </exec>
+    </target>
+    <target name="test-jasmine">
+        <exec executable="phantomjs" dir="test">
+            <arg line="jasmine/runner.js"/>
+            <arg line="jasmine-console.html"/>
+        </exec>
+    </target>
+    <target name="test" depends="install-dependencies">
+        <antcall target="test-qunit"/>
+        <antcall target="test-jasmine"/>
+    </target>
+    <target name="pack" depends="test">
+        <copy todir="build">
+            <fileset dir="." includes="i/,views/,widgets/,package.json"/>
+        </copy>
+        <exec executable="npm">
+            <arg line="pack"/>
+            <arg line="build"/>
+        </exec>
+        <delete dir="build"/>
+    </target>
+	<target name="publish" depends="pack">
+        <move todir="../../registry">
+            <fileset dir="." includes="*.tgz"/>
+        </move>	
+	</target>
+</project>

@@ -1,0 +1,12 @@
+{
+    "name":"launcher",
+    "version":"0.0.1",
+    "dependencies":{
+        "base": "http://localhost/e2e/registry/base-0.0.1.tgz"
+    },
+    "metadata":{
+        "name":"launcher",
+        "hash":"launcher",
+        "label":"Launcher"
+    }
+}

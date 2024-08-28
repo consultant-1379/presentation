@@ -1,0 +1,27 @@
+{
+    "name": "launcher_new",
+    "version": "0.0.1",
+    "dependencies": {
+        "titan": "0.0.5"
+    },
+    "_npmUser": {
+        "name": "admin",
+        "email": "daniel.brierton@ericsson.com"
+    },
+    "_id": "launcher_new@0.0.1",
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    },
+    "_engineSupported": true,
+    "_npmVersion": "1.1.24",
+    "_nodeVersion": "v0.6.19",
+    "_defaultsLoaded": true,
+    "_from": "skeleton",
+    "metadata":{
+        "name":"launcher new",
+        "hash":"launcher_new",
+        "label":"Launcher New"
+    }
+}

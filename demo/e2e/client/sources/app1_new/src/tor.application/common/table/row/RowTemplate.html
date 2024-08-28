@@ -1,0 +1,9 @@
+<tr>
+    {{#forEach options.config model get="columns" prop="id"}}
+        <td>{{this}}</td>
+    {{/forEach}}
+    <td>
+        <input type="button" class="app1New-btn app1New-btn-edit" value="" data-action="edit">
+        <input type="button" class="app1New-btn app1New-btn-delete" value="" data-action="delete">
+    </td>
+</tr>

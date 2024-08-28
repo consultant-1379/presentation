@@ -1,0 +1,73 @@
+mainMenu01.css.questionMark {
+
+	position:absolute;
+	background: url('img/questionMarkBlue.svg') no-repeat left center transparent;
+	display:inline-block;
+	padding-right: 10px;
+	width:32px;
+	height:32px;
+	float:left;
+
+}
+
+.questionMarkBlock {
+
+	position: relative;
+	padding: 1px 0 0 40px; 
+	margin: 14px 0 0 0;
+	color: #1D1D1B;
+	text-align: left;
+
+
+}
+
+
+.feedBackSmall {
+
+	display:block;
+	background-color: #fff;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	margin: 20px;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.0em;
+	font-weight: normal;
+
+}
+
+.shmShot{
+
+	margin:20px 0 10px 0;
+	display:block;
+	background: url('img/shm01.jpg') no-repeat left center;
+	width:650px;
+	height:423px;
+
+}
+
+.inventoryShot{
+
+	margin:20px 0 10px 0;
+	display:block;
+	background: url('img/inventoryView.png') no-repeat left center;
+	width:650px;
+	height:505px;
+	
+}
+
+.exportInventoryDialogShot{
+
+	margin:20px 0 10px 0;
+	display:block;
+	background: url('img/exportInventoryDialog.png') no-repeat left center;
+	width:404px;
+	height:151px;
+
+}
+
+.centerMe{
+
+
+	text-align: center;
+}

@@ -1,0 +1,34 @@
+<project>
+
+    <target name="install-dependencies">
+        <delete dir="node_modules"/>
+        <exec executable="npm.cmd" dir=".">
+            <arg line="install"/>
+        </exec>
+    </target>
+
+    <target name="clean">
+        <delete dir="apps"/>
+    </target>
+
+    <target name="build" depends="install-dependencies,clean">
+        <move todir="apps">
+            <fileset dir="node_modules"/>
+        </move>
+        <delete dir="node_modules"/>
+        <move todir="base">
+            <fileset dir="apps/base"/>
+        </move>
+        <exec executable="node" dir=".">
+            <arg line="build.js"/>
+        </exec>
+    </target>
+    <target name="move">
+        <move todir="./i">
+            <fileset dir="apps/app1/i"/>
+        </move>
+        <move todir="./i">
+            <fileset dir="apps/launcher/i"/>
+        </move>
+    </target>
+</project>

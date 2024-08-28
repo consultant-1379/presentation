@@ -1,0 +1,19 @@
+{
+  "name": "base",
+  "version": "0.0.1",
+  "dependencies": {},
+  "_id": "base@0.0.1",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "1.1.24",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "afc8955ca277c9bbe863250c6d8340552961c9bf"
+  },
+  "_from": "base@http://localhost/e2e/registry/base-0.0.1.tgz"
+}

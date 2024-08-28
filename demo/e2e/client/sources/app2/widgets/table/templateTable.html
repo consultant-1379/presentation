@@ -1,0 +1,18 @@
+<table class="table">
+    <colgroup>
+        <% _.each(model.attributes, function(column) { %>
+        <col style="width: <%- column.width %>">
+        <% }); %>
+        <col style="width: 160px;">
+    </colgroup>
+    <thead>
+    <tr>
+        <% _.each(model.attributes, function(column) { %>
+        <th><%- column.title %></th>
+        <% }); %>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+<project>
+    <target name="install-dependencies">
+        <delete dir="base"/>
+        <delete dir="node_modules"/>
+        <exec executable="npm.cmd" dir=".">
+            <arg line="install"/>
+        </exec>
+        <move todir=".">
+            <fileset dir="node_modules"/>
+        </move>
+        <delete dir="node_modules"/>
+    </target>
+    <target name="build" depends="install-dependencies">
+        <exec executable="node">
+            <arg value="lib/requirejs/r.js"/>
+            <arg value="-o"/>
+            <arg value="app.build.js"/>
+        </exec>
+    </target>
+	<target name="test-cleanup">
+		<delete>
+			<fileset dir="test-results" includes="**/*"/>  
+		</delete><!-- Jenkins JUnit plugin requires fresh folder -->
+	</target>
+	
+    <target name="test" depends="build,test-cleanup">
+        <java jar="lib/JsTestDriver/JsTestDriver-1.3.4.b.jar" fork="true">
+            <arg value="--config"/>
+            <arg value="config-jasmine.jstd"/>
+            <arg value="--tests"/>
+            <arg value="all"/>   <!-- "all": special keyword to run all of the tests-->
+            <arg value="--testOutput"/>
+            <arg value="test-results"/>
+        </java>
+    </target>
+	
+    <target name="testq">
+        <java jar="lib/JsTestDriver/JsTestDriver-1.3.4.b.jar" fork="true">
+            <arg value="--config"/>
+            <arg value="qunit/jsTestDriver.conf"/>
+            <arg value="--tests"/>
+            <arg value="all"/>   <!-- "all": special keyword to run all of the tests-->
+			<arg value="--runnerMode"/> 
+			<arg value="DEBUG"/>
+        </java>
+    </target>	
+	
+    <target name="test-coverage" depends="build,test-cleanup">
+        <java jar="lib/JsTestDriver/JsTestDriver-1.3.4.b.jar" fork="true">
+            <arg value="--port"/>
+            <arg value="4224"/>
+            <arg value="--browser"/>
+            <arg value="C:\Program Files\Mozilla Firefox\firefox.exe"/>
+            <arg value="--config"/>
+            <arg value="config-jasmine-coverage.jstd"/>
+            <arg value="--tests"/>
+            <arg value="all"/>
+            <arg value="--testOutput"/>
+            <arg value="test-results"/>
+        </java>
+    </target>
+</project>

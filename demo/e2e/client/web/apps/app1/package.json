@@ -1,0 +1,26 @@
+{
+  "name": "app1",
+  "version": "0.0.1",
+  "dependencies": {
+    "base": "http://localhost/e2e/registry/base-0.0.1.tgz"
+  },
+  "metadata": {
+    "name": "app1",
+    "hash": "app1",
+    "label": "App 1"
+  },
+  "_id": "app1@0.0.1",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "1.1.24",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "dfab8e07b61bdcfa3041b391fe117cb19d0bbf66"
+  },
+  "_from": "app1@http://localhost/e2e/registry/app1-0.0.1.tgz"
+}

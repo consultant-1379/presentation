@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<script type="text/javascript" src="tabber.js"></script>
+<script type="text/javascript">
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+</script>
+<script type="text/javascript" src="jQueryv1.6.2.js"></script>
+<script type="text/javascript" src="menu"></script>
+
+<style type="text/css">
+@import url("helpcss01.css");
+@import url("starRating.css");
+@import url("tabber.css");
+@import url("mainMenu01.css");
+</style>
+
+</head>
+
+<body>
+	
+  <div class="cont-topBar">
+        <a href="#" class="cont-topBar-logo"></a>
+        <div id="TopMenu">
+          <div class="mainBreadcrumb">
+            Help
+          </div>
+          
+          <div class="rightItems">
+            <a href="#">Sign out</a>
+          </div>
+          <div class="rightItems">
+
+            
+
+            <div class="dropdown">
+<a class="account" >Help<span class="helpDropDownIcon"></span></a>
+
+<div class="submenu">
+<ul class="root">
+<li ><a href="#">Open OSS help</a></li>
+<hr>
+<li ><a href="#">Send us your feedback</a></li>
+</ul>
+</div>
+
+</div>
+            
+          </div>
+          <div class="rightItems">
+            <a href="http://localhost/prototypes/prototypes/Help/TorLauncher/tor-launcher/#tor-launcher/groups">Launcher</a>
+          </div>
+          <div class="rightItems">
+            <a href="#" class="userIcon">Joe Bloggs</a>
+            
+          </div>
+          
+
+        </div>
+
+    </div>
+
+    <div id="Container">
+
+ <div class="helpContainer">
+ 
+ <div class="leftNav">
+ 	<div class="Sidebar-header">Support</div>
+  <div class="sideBarItem"><a href="#">Overview</a></div>
+	<div class="sideBarItem"><a href="#">Basic Concepts</a></div>
+	<div class="sideBarItem"><a href="#">What's New In This Release</a></div>
+	<div class="sideBarItem"><a href="#">Frequently Asked Questions</a></div>
+	<div class="sideBarItem"><a href="#">Troubleshooting</a></div>
+	<div class="sideBarItem"><a href="#">Glossary</a></div>
+	<div class="sideBarItem"><a href="#">Your Wiki Space</a></div>
+
+	<div class="checkBoxes"><input type="checkbox" name="glossary">Show inline glossary definitions</div>
+
+ </div>
+
+ <div class="col2outer">
+ <div class="content">
+
+<div class="contentBreadCrumb"><a href="#">OSS Help</a></div>
+<div class="contentTitle">Ericsson OSS</div>
+
+<div class="contentShortDescription">
+OSS-RC manages Network Elements in the core and access networks for the following domains: GSM, WCDMA, and LTE, which are developed by, or sourced by, Ericsson. OSS-RC supports centralized operation and maintenance of 2G and 3G networks and provides end-to-end management of the radio, core, and backbone networks.</div>
+
+
+<div class="faq">
+<div class="contentSubTitle"><strong>FREQUENTLY ASKED QUESTIONS</strong></div>
+
+<hr>
+<br>
+<ul>
+
+<div class="contentShortDescription">
+
+<li><a href="#">How do I find out what has changed in my new version of OSS?</a></li>
+ <br>
+<li><a href="#">What are the recommended maintenance tasks to keep OSS operating<br> at maximum efficiency?</a></li>
+ <br>
+<li><a href="#">Where can I find out about Log and Database Handling in the OSS?</a></li>
+
+<br><br>
+<a class="arrowLink" href="#">View all frequently asked questions</a>
+
+</ul>
+
+</div>
+
+<hr>
+
+<div class="tabber">
+
+     <div class="tabbertab">
+    <h2>Favorite Applications</h2>
+    <p>
+
+<div class="threeCols">
+  <ul>
+
+<li><a href="#">AXD Configuration Tool (ACT)</a></li>
+<li><a href="#">Alarm Status Matrix</a></li>
+<li><a href="#">CIF Activity Manager</a></li>
+<li><a href="#">CIF Management Console</a></li>
+<li><a href="#">CN Node Status Display</a></li>
+<li><a href="#">Cabinet Viewer (CABV)</a></li>
+<li><a href="#">Delete Fallback</a></li>
+<li><a href="#">IRATHOM</a></li>
+<li><a href="#">Job Task Manager</a></li>
+<li><a href="#">New Fallback</a></li>
+<li><a href="#">OSS Network Explorer</a></li>
+<li><a href="#">Performance Monitor (PMR)</a></li>
+<li><a href="#">RBS Element Manager</a></li>
+<li><a href="#">RXI Element Manager</a></li>
+<li><a href="shm.html">Software and Hardware Manager</a></li>
+<li><a href="#">TDS Log Adminstration</a></li>
+<li><a href="#">TSS Gui</a></li>
+
+</ul>
+</div>
+
+
+    </p>
+     </div>
+
+
+     <div class="tabbertab">
+    <h2>By Category</h2>
+    <p>Coming soon...</p>
+     </div>
+
+
+     <div class="tabbertab">
+    <h2>A to Z</h2>
+    <p>Coming soon...</p>
+     </div>
+
+</div>
+
+ </div>
+
+
+
+ <div class="rightNav">
+ <div class="rightBox01"><strong>What do you think?</strong><hr>
+Send us your feedback on our new OSS
+<br>
+<br>
+<div class="survey"><a href="#">Take 2 minute survey<span class="moreIcon"></span></a></div>
+ </div>
+<br>
+
+ <div class="rightBox01"><strong>What's New?</strong><hr>
+<div class="whatsNewVersionText">Version 13.0.3 (21 Oct, 2012)</div>
+<br>
+<ul>
+<li>New Web-based UI interface to remotely manage software and hardware for specific network element types.</li>
+<br>
+<li>Software inventory views and software distribution from OSS to network elements.</li>
+<br>
+<li>Remote software upgrade, including planning, starting and monitoring the upgrade process.</li>
+</ul>
+<br>
+<div class="releaseNotes"><a href="#">Release Notes<span class="bookIcon"></span><span class="moreIcon"></span></a></div>
+ </div>
+
+ </div>
+ </div>
+
+ </div>
+  <div class="footer">
+  	<div class="footerText">&#169; 2012 Ericsson AB. All rights reserved.
+</div>
+ </div>
+ </div>
+ 
+ 
+
+</body>
+</html>
+

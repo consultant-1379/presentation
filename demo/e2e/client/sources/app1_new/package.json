@@ -1,0 +1,27 @@
+{
+  "name": "app1_new",
+  "version": "0.0.4",
+  "dependencies": {
+    "titan": "0.0.6"
+  },
+  "_npmUser": {
+    "name": "admin",
+    "email": "victor.ovchinnikov@ericsson.com"
+  },
+  "_id": "app1_new@0.0.4",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "1.1.24",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "_from": "skeleton",
+    "metadata":{
+        "name":"app1 new",
+        "hash":"app1_new",
+        "label":"App 1 New"
+    }
+}

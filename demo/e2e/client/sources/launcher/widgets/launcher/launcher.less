@@ -1,0 +1,298 @@
+.launcher {
+
+    &-groupSelector {
+
+        &-header {
+            color: #00A9D4;
+            margin: 15px 20px;
+            font-weight: normal;
+        }
+
+        &-list-container {
+            position:  absolute;
+            top:  35px;
+            left:  0;
+            bottom: 0;
+            width:  300px;
+            background: #e9e9e9;
+            border-top: 1px solid #fff;
+        }
+
+        &-list {
+            list-style-type: none;
+            padding: 0 0 20px 0;
+            margin: 0;
+            width:  300px;
+            border-bottom: 1px solid #D2D2D2;
+
+            &-item {
+
+                /*&-groupIcon {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 48px;
+                    height: 24px;
+                    background: url('i/black_folder_default.svg') center center no-repeat;
+
+                    &-favorites {
+                        background: url('i/black_folder_fav.svg') center center no-repeat;
+                    }
+
+                }*/
+
+                &-groupName {
+                    display:inline-block;
+                    vertical-align: middle;
+                    padding: 10px 20px;
+                    font-size: 12pt;
+                }
+
+                &-groupArrow {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 48px;
+                    background: url('i/black_arrow_menu_more.svg') center center no-repeat;
+                    background-size: 24px 24px;
+                    opacity: 0.4;
+                }
+
+                &:last-child .launcher-groupSelector-list-item-link {
+                    border: none;
+                }
+
+                &-favorites .launcher-groupSelector-list-item-groupIcon {
+                    background-image: url('i/black_folder_fav.svg');
+                }
+
+            }
+
+            &-item-link {
+                position: relative;
+                display: block;
+                color: #4F4C4D;
+
+                &-selected {
+                    background: #00A9D4;
+                    color: #fff;
+
+                    .launcher-groupSelector-list-item-groupIcon {
+                        background: url('i/white_folder_default.svg') center center no-repeat;
+
+                        &-favorites {
+                            background: url('i/white_folder_fav.svg') center center no-repeat;
+                        }
+
+                    }
+
+                    .launcher-groupSelector-list-item-groupArrow {
+                        background: url('i/white_arrow_menu_more.svg') center center no-repeat;
+                        opacity: 1;
+                        display: block;
+                    }
+
+                }
+
+                &:hover {
+                    color: #4F4C4D;
+
+                    .launcher-groupSelector-list-item-groupArrow {
+                        display: block;
+                    }
+
+                }
+
+                &-selected:hover {
+                    color: #fff;
+                }
+
+            }
+
+        }
+
+    }
+
+    &-appSelector {
+
+        position: absolute;
+        top: 40px;
+        right: 0;
+        bottom: 0;
+        left: 320px;
+
+        &-container {
+            position: absolute;
+            top: 48px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            overflow: auto;
+        }
+
+        &-toolbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            white-space: nowrap;
+
+            &-searchIcon {
+                margin: 4px 0 4px 4px;
+                padding: 0;
+                line-height: 26px;
+                height: 26px;
+                width: 26px;
+                border-radius: 4px 0 0 4px;
+
+                border-style: solid;
+                border-color: #d2d2d2;
+                border-width: 1px 0 1px 1px;
+
+                background: url('i/black_search.svg') 5px center no-repeat;
+
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+
+            &-searchInput {
+                margin: 4px 4px 4px 0;
+                padding: 0;
+                line-height: 26px;
+                height: 26px;
+                width: 160px;
+                border-radius: 0 4px 4px 0;
+
+                border-style: solid;
+                border-color: #d2d2d2;
+                border-width: 1px 1px 1px 0;
+
+                vertical-align: top;
+            }
+
+            &-searchInput:focus {
+                outline: none;
+            }
+
+        }
+
+        &-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            -webkit-column-width: 360px;
+
+            &-header {
+                width: 320px;
+                padding: 5px 10px;
+                margin-top: 5px;
+                background: #00A9D4;
+                font-size: 16pt;
+                color: #fff;
+                display: inline-block;
+            }
+
+            &-item {
+                position: relative;
+                display: inline-block;
+                margin: 5px 5px 5px 0;
+                font-size: 12pt;
+
+                &-link {
+                    display: block;
+                    width: 276px;
+                    padding: 10px 32px;
+                }
+
+                &-faveIcon {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 32px;
+                    background: url('i/black_star.svg') center center no-repeat;
+                    background-size: 16px 16px;
+                    opacity: 0.4;
+                    display: none;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+
+                &-faveIcon-favorited {
+                    display: block;
+                    background-image: url('i/yellow_star.svg');
+                    opacity: 1;
+                }
+
+                &-label {
+                    color: #4F4C4D;
+                    font-size: 12pt;
+                    padding: 10px 0;
+
+                }
+
+                &-infoIcon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 32px;
+                    background: url('i/black_info.svg') center center no-repeat;
+                    background-size: 16px 16px;
+                    opacity: 0.4;
+                    display: none;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+
+
+
+                &:hover {
+                    background: #F0EFF0;
+
+                    .launcher-appSelector-list-item-faveIcon {
+                        display: block;
+                    }
+
+                    .launcher-appSelector-list-item-infoIcon {
+                        display: block;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &-appDetails {
+        display: none;
+        position: absolute;
+        top: 110px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #FBFAFB;
+        padding: 0 30px;
+
+        &-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+    }
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application</title>
+    <script type="text/javascript" src="titan-0.0.1.js"></script>
+    <script type="text/javascript">
+        console.log($, jQuery, _, Backbone);
+        document.ready = function() {
+            require(['Titan'], function(Titan) {
+                var TextBoxModel = Titan.Model.extend({
+
+                });
+
+                var TextBoxView = Titan.View.extend({
+
+                });
+
+                var TextBox = Titan.Widget.extend({
+                    options: {
+                        Model: TextBoxModel,
+                        View: TextBoxView
+                    }
+                });
+
+                var textBox = new TextBox();
+                textBox.appendTo('#Container');
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="Container">data</div>
+
+</body>
+</html>

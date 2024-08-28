@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite tests='1' failures='0' disabled='0' errors='0' time='0.01' name='tests'>
+	<testsuite tests='1' failures='0' disabled='0' errors='0' time='0.01' name='Application'>
+		<testcase name='1 Check that Places is defined' status='pass' time='0.007' classname='Application' />
+	</testsuite>
+</testsuite>

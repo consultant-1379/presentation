@@ -1,0 +1,47 @@
+<project name="Skeleton" basedir=".">
+    <property file="config/app.properties"/>
+
+    <target name="install_dependencies">
+        <exec executable="npm.cmd" failonerror="true">
+            <arg value="--registry"/>
+            <arg value="http://150.132.76.214:5900/registry/_design/app/_rewrite/"/>
+            <arg value="install"/>
+        </exec>
+    </target>
+
+    <target name="build" depends="install_dependencies">
+        <delete dir="${app.dir_build}"/>
+        <delete dir="${app.dir_temp}"/>
+        <exec executable="${app.dir_tools}/.bin/r.js.cmd" failonerror="true">
+            <arg value="-o"/>
+            <arg value="config/app.build.js"/>
+        </exec>
+        <copy file="${app.dir_temp}/tor.application/Application.js" todir="build"/>
+        <copy file="package.json" todir="${app.dir_build}"/>
+        <copy todir="${app.dir_build}">
+            <fileset dir="resources"/>
+        </copy>
+        <delete dir="${app.dir_temp}"/>
+        <exec executable="${app.dir_tools}/.bin/uglifyjs.cmd" failonerror="true">
+            <arg value="${app.dir_build}/Application.js"/>
+            <arg value=">"/>
+            <arg value="${app.dir_build}/Application.min.js"/>
+        </exec>
+    </target>
+
+    <target name="test" depends="build">
+        <exec executable="phantomjs" failonerror="true">
+            <arg value="${app.dir_lib}/qunit/phantomjs-runner.js"/>
+            <arg value="test/index.html"/>
+        </exec>
+    </target>
+
+    <target name="publish">
+        <exec executable="npm.cmd" failonerror="true">
+            <arg value="--registry"/>
+            <arg value="http://150.132.76.214:5900/registry/_design/app/_rewrite/"/>
+            <arg value="--force"/>
+            <arg value="publish"/>
+        </exec>
+    </target>
+</project>

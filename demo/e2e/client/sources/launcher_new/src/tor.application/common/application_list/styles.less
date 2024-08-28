@@ -1,0 +1,162 @@
+.launcher {
+    &-appSelector {
+
+        position: absolute;
+        top: 36px;
+        right: 0;
+        bottom: 0;
+        left: 320px;
+
+        &-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            overflow: auto;
+        }
+
+        &-toolbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            white-space: nowrap;
+
+            &-searchIcon {
+                margin: 4px 0 4px 4px;
+                padding: 0;
+                line-height: 26px;
+                height: 26px;
+                width: 26px;
+                border-radius: 4px 0 0 4px;
+
+                border-style: solid;
+                border-color: #d2d2d2;
+                border-width: 1px 0 1px 1px;
+
+                background: url('i/black_search.svg') 5px center no-repeat;
+
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+
+            &-searchInput {
+                margin: 4px 4px 4px 0;
+                padding: 0;
+                line-height: 26px;
+                height: 26px;
+                width: 160px;
+                border-radius: 0 4px 4px 0;
+
+                border-style: solid;
+                border-color: #d2d2d2;
+                border-width: 1px 1px 1px 0;
+
+                vertical-align: top;
+            }
+
+            &-searchInput:focus {
+                outline: none;
+            }
+
+        }
+
+        &-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            -webkit-column-width: 360px;
+
+            &-header {
+                width: 320px;
+                padding: 5px 10px;
+                margin-top: 5px;
+                background: #00A9D4;
+                font-size: 16pt;
+                color: #fff;
+                display: inline-block;
+            }
+
+            &-item {
+                position: relative;
+                display: inline-block;
+                margin: 5px 5px 5px 0;
+                font-size: 12pt;
+
+                &-link {
+                    display: block;
+                    width: 276px;
+                    padding: 10px 32px;
+                }
+
+                &-faveIcon {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 32px;
+                    background: url('i/black_star.svg') center center no-repeat;
+                    background-size: 16px 16px;
+                    opacity: 0.4;
+                    display: none;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+
+                &-faveIcon-favorited {
+                    display: block;
+                    background-image: url('i/yellow_star.svg');
+                    opacity: 1;
+                }
+
+                &-label {
+                    color: #4F4C4D;
+                    font-size: 12pt;
+                    padding: 10px 0;
+
+                }
+
+                &-infoIcon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 32px;
+                    background: url('i/black_info.svg') center center no-repeat;
+                    background-size: 16px 16px;
+                    opacity: 0.4;
+                    display: none;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+
+
+
+                &:hover {
+                    background: #F0EFF0;
+
+                    .launcher-appSelector-list-item-faveIcon {
+                        display: block;
+                    }
+
+                    .launcher-appSelector-list-item-infoIcon {
+                        display: block;
+                    }
+
+                }
+            }
+        }
+    }
+}

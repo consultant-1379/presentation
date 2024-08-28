@@ -1,0 +1,76 @@
+<project name="App1_new" basedir="." default="build">
+    <property file="config/app.properties"/>
+
+    <target name="install_dependencies">
+        <exec executable="npm.cmd" failonerror="true">
+            <arg value="--registry"/>
+            <arg value="http://150.132.76.214:5900/registry/_design/app/_rewrite/"/>
+            <arg value="install"/>
+        </exec>
+    </target>
+    <target name="compile" depends="install_dependencies">
+        <delete dir="${app.dir_build}"/>
+        <delete dir="${app.dir_temp}"/>
+        <exec executable="node" failonerror="true">
+            <arg value="${app.dir_tools}/requirejs/bin/r.js"/>
+            <arg value="-o"/>
+            <arg value="config/app.build.js"/>
+        </exec>
+        <copy todir="${app.dir_build}">
+            <fileset dir="${app.dir_temp}" includes="tor.application/Application.js"/>
+        </copy>
+        <copy file="package.json" todir="${app.dir_build}"/>
+        <copy todir="${app.dir_build}">
+            <fileset dir="resources"/>
+        </copy>
+        <delete dir="${app.dir_temp}"/>
+    </target>
+    <target name="test" depends="compile">
+        <condition property="path" value="config/build.windows.properties">
+            <os family="windows"/>
+        </condition>
+        <condition property="path" value="config/build.linux.properties">
+            <os family="unix"/>
+        </condition>
+
+        <property file="${path}"/>
+
+        <antcall target="test-run"/>
+    </target>
+    <target name="test-run">
+        <delete dir="build-tmp"/>
+        <exec executable="${build.jscoverage}" failonerror="true">
+            <arg line="src"/>
+            <arg line="build-tmp"/>
+        </exec>
+        <copy file="test/index.html" todir="build-tmp"/>
+        <replace file="build-tmp/index.html">
+            <replacetoken><![CDATA[baseUrl: '../src']]></replacetoken>
+            <replacevalue><![CDATA[baseUrl: '.']]></replacevalue>
+        </replace>
+        <exec executable="${build.phantomjs}" failonerror="true">
+            <arg line="${app.dir_lib}/jscoverage/test-runner.js"/>
+            <arg line="--dir"/>
+            <arg line="reports"/>
+            <arg line="--test"/>
+            <arg line="build-tmp/index.html"/>
+        </exec>
+    </target>
+    <target name="minimize" depends="test">
+        <exec executable="${app.dir_tools}/.bin/uglifyjs.cmd" failonerror="true">
+            <arg value="${app.dir_build}/Application.js"/>
+            <arg value=">"/>
+            <arg value="${app.dir_build}/Application.min.js"/>
+        </exec>
+    </target>
+    <target name="build" depends="minimize">
+    </target>
+    <target name="publish" depends="build">
+        <exec executable="npm.cmd" failonerror="true">
+            <arg value="--registry"/>
+            <arg value="http://150.132.76.214:5900/registry/_design/app/_rewrite/"/>
+            <arg value="--force"/>
+            <arg value="publish"/>
+        </exec>
+    </target>
+</project>

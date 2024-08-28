@@ -1,0 +1,9 @@
+<tr>
+    <% _.each(options.config.get('columns'), function(column) { %>
+    <td><%- model.get(column.id) %></td>
+    <% }); %>
+    <td>
+        <input type="button" class="app1-btn app1-btn-edit" value="" data-action="edit">
+        <input type="button" class="app1-btn app1-btn-delete" value="" data-action="delete">
+    </td>
+</tr>

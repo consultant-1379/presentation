@@ -1,0 +1,19 @@
+<div>
+    <div class="page-header">
+        <h3 class="app2-Header">Application 2</h3>
+    </div>
+    <form class="well form-inline" data-widget="./../../widgets/form/form">
+        <input type="text" id="column1" class="input-large" placeholder="Column 1">
+        <input type="text" id="column2" class="input-large" placeholder="Column 2">
+        <input type="text" id="column3" class="input-large" placeholder="Column 3">
+        <span data-action="new">
+            <input type="submit" class="btn" value="Add">
+        </span>
+        <span data-action="edit" style="display: none;">
+            <input type="submit" class="btn" value="Save">
+            <input type="button" class="btn" value="Cancel">
+        </span>
+    </form>
+
+    <div data-name="table" data-widget="./../../widgets/table/table" data-settings="rest/ui/settings/apps/app2/widgets/table1/columns" data-collection="rest/messages"></div>
+</div>

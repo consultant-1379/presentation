@@ -1,0 +1,24 @@
+({
+    baseUrl:'src',
+    paths:{
+        'specs':'../specs',
+        'text':'../lib/requirejs/text'
+    },
+    dir:'build',
+    optimize:'none',
+    modules:[
+        {
+            name:'main',
+            exclude:[
+                'text'
+            ]
+        },
+        {
+            name:'specs/all',
+            exclude:[
+                'text',
+                'main'
+            ]
+        }
+    ]
+})

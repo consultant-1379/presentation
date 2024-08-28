@@ -1,0 +1,26 @@
+<project>
+    <target name="pack" depends="install-dependencies">
+        <copy todir="build">
+            <fileset dir="." includes="i/,views/,widgets/,package.json"/>
+        </copy>
+        <exec executable="npm.cmd">
+            <arg line="pack"/>
+            <arg line="build"/>
+        </exec>
+        <delete dir="build"/>
+        <move todir="../../registry">
+            <fileset dir="." includes="*.tgz"/>
+        </move>
+    </target>
+    <target name="install-dependencies">
+        <delete dir="base"/>
+        <delete dir="node_modules"/>
+        <exec executable="npm.cmd" dir=".">
+            <arg line="install"/>
+        </exec>
+        <move todir=".">
+            <fileset dir="node_modules"/>
+        </move>
+        <delete dir="node_modules"/>
+    </target>
+</project>

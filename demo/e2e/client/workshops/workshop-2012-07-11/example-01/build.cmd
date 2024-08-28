@@ -1,0 +1,1 @@
+node ../lib/amd/r.js -o app.build.js

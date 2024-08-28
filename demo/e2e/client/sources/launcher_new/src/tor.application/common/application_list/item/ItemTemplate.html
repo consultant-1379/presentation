@@ -1,0 +1,11 @@
+<div class="launcher-appSelector-list-item">
+    <span class="launcher-appSelector-list-item-link">
+        {{#if model.attributes.favorite}}
+        <a href="#" class="launcher-appSelector-list-item-faveIcon launcher-appSelector-list-item-faveIcon-favorited"></a>
+        {{else}}
+        <a href="#" class="launcher-appSelector-list-item-faveIcon"></a>
+        {{/if}}
+        <a href="#" class="launcher-appSelector-list-item-label">{{ model.attributes.label }}</a>
+        <a href="#" class="launcher-appSelector-list-item-infoIcon"></a>
+    </span>
+</div>

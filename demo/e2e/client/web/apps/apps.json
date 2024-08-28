@@ -1,0 +1,17 @@
+[
+    {
+        "name": "launcher",
+        "hash": "launcher",
+        "label": "Launcher"
+    },
+    {
+        "name": "app1",
+        "hash": "app1",
+        "label": "App 1"
+    },
+    {
+        "name": "app2",
+        "hash": "app2",
+        "label": "App 2"
+    }
+]

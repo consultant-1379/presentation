@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application</title>
+    <script type="text/javascript" src="titan-0.0.1.js"></script>
+    <script type="text/javascript">
+        console.log($, jQuery, _, Backbone);
+        document.ready = function() {
+            require(['../com/ericsson/ui/widgets/TextBox/TextBox'], function (TextBox) {
+                var textBox = new TextBox();
+                textBox.appendTo('#Container');
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="Container"></div>
+
+</body>
+</html>

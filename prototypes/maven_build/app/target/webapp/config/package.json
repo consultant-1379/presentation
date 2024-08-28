@@ -1,0 +1,7 @@
+{
+    "name": "application-grey",
+    "version": "0.0.1",
+    "dependencies": {
+        "titan": "0.0.7"
+    }
+}

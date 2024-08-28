@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../node_modules/titan/js/titan-prod.js"></script>
+    <script type="text/javascript" src="ajax-extension.js"></script>
+    <script type="text/javascript" src="Application.js"></script>
+    <script type="text/javascript">
+        require(['domReady!', 'tor.application/Application'], function (doc, Application) {
+            var app = new Application({
+                container:'#Container'
+            });
+            app.start();
+        });
+    </script>
+</head>
+<body>
+<div id="Container"></div>
+</body>
+</html>

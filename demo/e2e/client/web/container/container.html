@@ -1,0 +1,51 @@
+<div>
+
+    <div class="tor-NavigationBar">
+        <div class="tor-NavigationBar-logo"></div>
+        <ul class="tor-NavigationBar-pills">
+            <% _.each(collection.models, function(model) {
+
+                if (model.get('views')) {
+
+                    %>
+            <li class="tor-NavigationBar-pill dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <%- model.get('label') %>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <%
+
+                    _.each(model.get('views'), function(item) {
+                        %>
+                            <li><a href="#<%- item.hash %>"><%- item.label %></a></li>
+                        <%
+                    });
+
+                    %>
+                </ul>
+            </li>
+                    <%
+
+                } else {
+                    %>
+                    <li class="tor-NavigationBar-pill"><a href="#<%- model.get('hash') %>"><%- model.get('label') %></a></li>
+                    <%
+                }
+
+            }); %>
+        </ul>
+        <div class="tor-NavigationBar-icons">
+            <div class="tor-NavigationBar-userData">
+                <div class="tor-NavigationBar-userName"><%- username %></div>
+                <ul class="tor-NavigationBar-dropdownMenu">
+                    <!--<li class="tor-NavigationBar-dropdownMenuItem"><a href="#">Settings</a></li>-->
+                    <li class="tor-NavigationBar-dropdownMenuItem tor-NavigationBar-logout"><a href="#">Log Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="tor-container" id="ApplicationContainer"></div>
+
+</div>

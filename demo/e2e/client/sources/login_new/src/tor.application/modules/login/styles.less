@@ -1,0 +1,173 @@
+
+@font-face {
+    font-family: EricssonCapitalTT;
+    src: url('i/EricssonCapitalTT.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    width: 100%;
+    height: 100%;
+}
+
+button, input, textarea, select {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#eri-fullBlend {
+    position: absolute;
+    background-image: -o-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -moz-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -webkit-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -ms-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.1, #A2C517), color-stop(0.3, #009046), color-stop(0.5, #0082B6), color-stop(0.7, #151F77), color-stop(1, #DB0050));
+    background-image: linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    width: 100%;
+    height: 3px;
+    top: 0; left: 0;
+    font-size: 1px;
+}
+
+
+html {
+     background-image: -moz-linear-gradient(left top, #0E6EA8 0%, #1C4E95 50%, #2A2D82 100%);
+     background: -o-linear-gradient(left top, #0E6EA8 percentage(0), #1C4E95 percentage(0.5), #2A2D82 percentage(1));
+     background: -moz-linear-gradient(left top, #0E6EA8 percentage(0), #1C4E95 percentage(0.5), #2A2D82 percentage(1));
+     background: -webkit-linear-gradient(left top, #0E6EA8 percentage(0), #1C4E95 percentage(0.5), #2A2D82 percentage(1));
+     background: -ms-linear-gradient(left top, #0E6EA8 percentage(0), #1C4E95 percentage(0.5), #2A2D82 percentage(1));
+     background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #0E6EA8), color-stop(0.5, #1C4E95), color-stop(1, #2A2D82));
+     background: linear-gradient(left top, #0E6EA8 percentage(0), #1C4E95 percentage(0.5), #2A2D82 percentage(1));
+}
+body {
+    background: url(i/themes/eri-bgnd_networkedsociety.png) no-repeat center center transparent;
+    background-size: cover;
+}
+
+.app-Login {
+    width: 100%;
+    height: 100%;
+}
+
+.tor-table {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.tor-table_centered .tor-tdContent {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 30px;
+}
+
+.tor-LoginBox {
+    position: relative;
+    max-width: 400px;
+    min-height: 260px;
+    padding: 60px 10px 20px 10px;
+    margin: 10px auto;
+}
+
+.tor-LoginBox .tor-LoginBox-ericssonLogo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: -5000px;
+    background: url('i/login/ericssonlogo_white.svg') no-repeat center center transparent;
+    background-size: 70px 60px;
+    width: 70px;
+    height: 60px;
+}
+
+.tor-LoginBox .tor-LoginBox-loginFormBlock {
+    position: relative;
+    text-align: left;
+}
+
+.tor-LoginBox .tor-LoginBox-loginFormBlock .tor-LoginBox-projectName {
+    font-family: EricssonCapitalTT;
+    color: white;
+    font-weight: normal;
+    padding: 60px 0;
+    margin: 0;
+    min-height: 40px;
+}
+
+.tor-LoginBox .tor-LoginBox-loginFormBlock .tor-LoginBox-errorBox {
+    display: none;
+}
+
+.tor-LoginBox .tor-LoginBox-loginFormBlock .tor-LoginBox-inputs {
+    position: relative;
+}
+
+.tor-inputComposition {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.tor-formInput {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    width: 150px;
+    height: 26px;
+    vertical-align: top;
+    border: 2px solid #b1b3b4;
+    padding: 0 2px;
+    margin: 0 4px 5px 0;
+}
+
+.tor-LoginBox-loginButton {
+    background: #A5C753;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A5C753), color-stop(1, #89BA17));
+    background: -ms-linear-gradient(top, #A5C753, #89BA17);
+    background: -o-linear-gradient(center top, #A5C753 0%, #89BA17 100%);
+    background: -webkit-linear-gradient(center top, #A5C753 0%, #89BA17 100%);
+    background: -moz-linear-gradient(center top, #A5C753 0%, #89BA17 100%);
+    background: linear-gradient(center top, #A5C753 0%, #89BA17 100%);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+    width: 30px;
+    height: 26px;
+    border: 2px solid #a5c753;
+    padding: 0;
+    margin: 0 4px 5px 0;
+    cursor: pointer;
+}
+.tor-LoginBox-loginButton:hover {
+    background: #89ba17;
+}
+.tor-LoginBox-loginButton .tor-LoginBox-image {
+    display: inline-block;
+    background: url('i/login/aro_right_big.svg') no-repeat center center transparent;
+    background-size: 9px 15px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width:600px) {
+    html, body {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width:400px) {
+    html, body {
+        font-size: 0.8em;
+    }
+}

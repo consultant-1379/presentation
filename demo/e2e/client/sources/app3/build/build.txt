@@ -1,0 +1,10 @@
+
+main.js
+----------------
+text!template.html
+main.js
+
+specs/all.js
+----------------
+specs/mainSpec.js
+specs/all.js

@@ -1,0 +1,28 @@
+<project>
+    <target name="build">
+        <copy todir="build">
+            <fileset dir="." includes="css/,img/,templates/,components/,require.js,package.json"/>
+        </copy>
+        <concat destfile="build/base.js">
+            <fileset file="lib/require.js" />
+            <fileset file="lib/text.js" />
+            <fileset file="lib/less.js" />
+            <fileset file="lib/jquery.js" />
+            <fileset file="lib/underscore.js" />
+            <fileset file="lib/backbone.js" />
+            <fileset file="base.js" />
+        </concat>
+    </target>
+    <target name="pack" depends="build">
+        <exec executable="npm.cmd">
+            <arg line="pack"/>
+            <arg line="build"/>
+        </exec>
+    </target>
+	<target name="publish" depends="build">
+        <exec executable="npm.cmd">
+            <arg line="publish"/>
+            <arg line="build"/>
+        </exec>
+    </target>
+</project>

@@ -1,0 +1,26 @@
+{
+  "name": "launcher",
+  "version": "0.0.1",
+  "dependencies": {
+    "base": "http://localhost/e2e/registry/base-0.0.1.tgz"
+  },
+  "metadata": {
+    "name": "launcher",
+    "hash": "launcher",
+    "label": "Launcher"
+  },
+  "_id": "launcher@0.0.1",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "1.1.24",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "20166517e8dca977f589887b6473e57e4ccae52b"
+  },
+  "_from": "launcher@http://localhost/e2e/registry/launcher-0.0.1.tgz"
+}

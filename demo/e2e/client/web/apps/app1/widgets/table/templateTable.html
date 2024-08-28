@@ -1,0 +1,40 @@
+<table class="app1-table">
+    <colgroup>
+        <% _.each(model.get('columns'), function(column) { %>
+        <col style="width: <%- column.width %>">
+        <% }); %>
+        <col style="width: 70px;">
+    </colgroup>
+    <thead>
+    <tr>
+        <% var sorting = model.get('sorting'); _.each(model.get('columns'), function(column) { %>
+        <%
+            if (sorting && sorting.column == column.id) {
+                if (!sorting.asc) {
+                %>
+                    <th class="app1-sortable app1-sorted-asc" data-column="<%- column.id %>"><%- column.title %></th>
+                <%
+                }
+                else
+                {
+                %>
+                    <th class="app1-sortable app1-sorted-desc" data-column="<%- column.id %>"><%- column.title %></th>
+                <%
+                }
+            }
+        else
+        {
+        %>
+            <th class="app1-sortable" data-column="<%- column.id %>"><%- column.title %></th>
+        <%
+        }
+        %></th>
+        <% }); %>
+        <th>
+            <button class="btn app1-table-btn-settings" data-action="settings"></button>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>

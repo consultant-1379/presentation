@@ -1,0 +1,34 @@
+<assembly>
+    <id>package</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+			<directory>webapp/resources</directory>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>webapp/build/temp/application</directory>
+			<includes>
+				<include>Application.js</include>
+			</includes>
+            <outputDirectory>/application</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>webapp/assembly/</directory>
+            <includes>
+                    <include>package.json</include>
+            </includes>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>webapp/config</directory>
+            <includes>
+                    <include>app.json</include>
+            </includes>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>		
+    </fileSets>
+</assembly>

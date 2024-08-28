@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEV: Application</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="node_modules/titan/js/titan.js"></script>
+    <script type="text/javascript">
+        require({
+            baseUrl:'src',
+            resources:'resources'
+        }, ['domReady!', 'application/Application'], function (doc, Application) {
+            var app = new Application({
+                container:'#Container'
+            });
+            app.start();
+        });
+    </script>
+</head>
+<body>
+<div id="Container"></div>
+</body>
+</html>

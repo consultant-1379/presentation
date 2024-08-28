@@ -1,0 +1,168 @@
+@widget-url: 'widgets/linear_horizontal_panels/';
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E9E9E9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4F4D4C;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+.linear-horizontal-panels-container {
+    position: absolute;
+    top: 110px;
+    right: 30px;
+    bottom: 0;
+    left: 30px;
+    overflow: hidden;
+}
+
+.linear-horizontal-panels-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.linear-horizontal-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.launcher_groups {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    overflow: auto;
+    z-index: 10;
+}
+
+.launcher_groups ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.launcher_groups ul li a {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 2px;
+    background: #F4F4F4;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+}
+
+.launcher_groups ul li a.selected {
+    background: #00ABD6;
+    color: #fff;
+}
+
+.launcher_groups ul li a .group_num {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.group_list ul li a .right_arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    width: 32px;
+    background: url('@{base-url}@{widget-url}images/black_arrow_fwd.svg') center center no-repeat;
+    background-size: 16px 16px;
+}
+
+.group_list ul li a.selected .right_arrow {
+    background-image: url('@{base-url}@{widget-url}images/white_arrow_fwd.svg');
+    opacity: 1;
+}
+
+.launcher_apps {
+    position: absolute;
+    left: 320px;
+    width: 400px;
+    overflow: auto;
+}
+
+.app_list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.app_list ul li a {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 2px;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+}
+
+.app_list ul li a.selected {
+    background: #00ABD6;
+    color: #fff;
+}
+
+.app_list ul li a .right_arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    width: 32px;
+    background: url('@{base-url}@{widget-url}images/black_arrow_fwd.svg') center center no-repeat;
+    background-size: 16px 16px;
+}
+
+.app_list ul li a.selected .right_arrow {
+    background-image: url('@{base-url}@{widget-url}images/white_arrow_fwd.svg');
+    opacity: 1;
+}
+
+.launcher_app_details {
+    position: absolute;
+    right: 30px;
+    left: 740px;
+    overflow: auto;
+}
+
+.launcher_app_details .app_details_name {
+    color: #00ABD6;
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
+
+.launcher_app_details .app_meta p {
+    margin: 3px 0;
+    color: #666;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.launcher_app_details .app_meta p .app_meta_label {
+    display: inline-block;
+    width: 80px;
+}
+
+.launcher_nav_bar {
+    position: absolute;
+    display: none;
+}

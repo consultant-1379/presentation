@@ -1,0 +1,99 @@
+.app1 {
+    &-table {
+        border-spacing: 0;
+        background: #fff;
+        width: 100%;
+
+        &-btn-settings,
+        &-btn-settings:hover,
+        &-btn-settings:active
+        {
+            border: none;
+            box-shadow: none;
+            background: url('i/icon_settings.svg') center center no-repeat;
+            background-size: 16px 16px;
+            padding: 0;
+            margin: 0 2px 0 0 ;
+            width: 16px;
+            height: 16px;
+            opacity: 0.5;
+        }
+
+        &-btn-settings:hover {
+            opacity: 1;
+        }
+
+
+        th {
+            background-color: #00ABD6;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        th, td {
+            padding: 5px 10px;
+            border-top: 1px solid #CCEEF7;
+            text-align: left;
+        }
+
+        tbody tr input {
+            opacity: 0.4;
+        }
+
+        tbody tr:hover td {
+            background-color: #E5F7FB;
+        }
+
+        tbody tr:hover input {
+            opacity: 1;
+        }
+
+        td {
+            .app1-btn, .app1-btn:active, .app1-btn:hover {
+                border: none;
+                background-size: 20px 20px;
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+                box-shadow: none;
+            }
+
+            .app1-btn-edit {
+                background: url(i/icon_edit_normal.svg) center center no-repeat;
+
+                &:hover {
+                    background-image: url(i/icon_edit_hover.svg);
+                }
+            }
+
+            .app1-btn-delete {
+                background: url(i/icon_delete_normal.svg) center center no-repeat;
+
+                &:hover {
+                    background-image: url(i/icon_delete_hover.svg);
+                }
+            }
+        }
+
+        td:last-child, th:last-child {
+            text-align: right;
+            font-size: 0;
+            width: auto;
+        }
+
+        .app1-sorted-asc {
+            background: #049DC3 url('i/arrow_up_white.png') right center no-repeat;
+        }
+
+        .app1-sorted-desc {
+            background: #049DC3 url('i/arrow_down_white.png') right center no-repeat;
+        }
+
+        .app1-sortable {
+            cursor: pointer;
+            &:hover {
+                background-color: #049DC3;
+            }
+        }
+    }
+}

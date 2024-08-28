@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Test Cases</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../node_modules/titan/lib/jasmine/jasmine-1.2.0/jasmine.css">
+    <script type="text/javascript" src="../node_modules/titan/lib/jasmine/jasmine-1.2.0/jasmine.js"></script>
+    <script type="text/javascript" src="../node_modules/titan/lib/jasmine/jasmine-1.2.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="../node_modules/titan/lib/jasmine/console-reporter.js"></script>
+
+    <script type="text/javascript" src="../node_modules/titan/js/titan.js"></script>
+    <script type="text/javascript" src="../node_modules/titan/ext/mock/mock.js"></script>
+    <script type="text/javascript" src="../resources/extension.js"></script>
+
+</head>
+<body>
+<div id="testContainer" style="display: none;"></div>
+<script type="text/javascript">
+    require({
+        baseUrl: '../src',
+        paths: {
+            test: '../test'
+        }
+    }, [
+        'test/tor.application/Application'
+//        'test/tor.application/AppActions'
+    ], function () {
+        jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+        jasmine.getEnv().addReporter(new jasmine.ConsoleReporter());
+        jasmine.getEnv().execute();
+    });
+</script>
+</body>
+</html>

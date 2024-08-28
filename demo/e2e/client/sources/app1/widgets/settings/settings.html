@@ -1,0 +1,19 @@
+<div class="app1-Settings" style="display: none;">
+    <div class="app1-Settings-content">
+        <h3 class="app1-Settings-header">Table settings</h3>
+        <p class="app1-Settings-description">Reorder columns using the up and down icons</p>
+        <ul data-type="selected" class="app1-Settings-list">
+            <%
+                var i = 0;
+                _.each(model.get('columns'), function(column) { %>
+            <li class="app1-Settings-row app1-Settings-selected" data-column="<%- column.id %>" data-column-index="<%- i %>"><span class="app1-Settings-up"></span><span class="app1-Settings-down"></span><%- column.title %><span class="app1-Settings-add"></span><span class="app1-Settings-remove"></span></li>
+            <%      i++;
+                }); %>
+        </ul>
+        <ul data-type="not-selected" class="app1-Settings-list">
+            <!--<li class="app1-Settings-row"><span class="app1-Settings-up"></span><span class="app1-Settings-down"></span>Heading 5<span class="app1-Settings-add"></span><span class="app1-Settings-remove"></span></li>
+            <li class="app1-Settings-row"><span class="app1-Settings-up"></span><span class="app1-Settings-down"></span>Heading 6<span class="app1-Settings-add"></span><span class="app1-Settings-remove"></span></li>-->
+        </ul>
+        <button class="btn app1-Settings-close" data-action="settings"><span class="btn-cancel-icon"></span>Close</button>
+    </div>
+</div>

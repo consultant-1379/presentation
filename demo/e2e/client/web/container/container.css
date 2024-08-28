@@ -1,0 +1,217 @@
+@font-face {
+    font-family: EricssonCapitalTT;
+    src: url('i/EricssonCapitalTT.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    width: 100%;
+    height: 100%;
+    background: #FBFAFB;
+}
+
+button, input, textarea, select {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a, a:hover {
+    color: #0066B3;
+    text-decoration: none;
+}
+
+#eri-fullBlend {
+    position: absolute;
+    background-image: -o-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -moz-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -webkit-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -ms-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.1, #A2C517), color-stop(0.3, #009046), color-stop(0.5, #0082B6), color-stop(0.7, #151F77), color-stop(1, #DB0050));
+    background-image: linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    width: 100%;
+    height: 3px;
+    top: 0; left: 0;
+    font-size: 1px;
+}
+
+.tor-NavigationBar {
+    position: relative;
+    top: 3px;
+    width: 100%;
+    height: 30px;
+    z-index: 100;
+
+    background: #e2e1e1;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF), color-stop(1, #e2e1e1));
+    background: -ms-linear-gradient(top, #FFF, #e2e1e1);
+    background: -o-linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+    background: -webkit-linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+    background: -moz-linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+    background: linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+
+    -webkit-box-shadow: 0 2px 2px #d2d2d2;
+    -moz-box-shadow: 0 2px 2px #d2d2d2;
+    box-shadow: 0 2px 2px #d2d2d2;
+}
+
+.tor-NavigationBar .tor-NavigationBar-logo {
+    background: url('../i/ericssonLogo_blue.png') no-repeat center center transparent;
+    background-size: 20px 20px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.tor-NavigationBar .tor-NavigationBar-pills {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 30px;
+    list-style-type: none;
+    line-height: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.tor-NavigationBar .tor-NavigationBar-pills .tor-NavigationBar-pill {
+    display: inline;
+}
+
+.tor-NavigationBar .tor-NavigationBar-pills .tor-NavigationBar-pill a {
+    display: inline-block;
+    padding: 0 5px 0 15px;
+    font-size: 0.8em;
+    color: #000;
+    margin: 0;
+}
+
+.tor-NavigationBar .tor-NavigationBar-pills .tor-NavigationBar-pill a:hover {
+    color: #0066B3;
+}
+
+.tor-NavigationBar .tor-NavigationBar-pills .tor-NavigationBar-pill.tor-NavigationBar-pillSelected a {
+    color: #0066B3;
+    font-weight: bold;
+}
+
+.tor-NavigationBar .tor-NavigationBar-icons {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+}
+
+.tor-NavigationBar-userData {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+}
+
+.tor-NavigationBar-userData .tor-NavigationBar-userName {
+    padding: 0 15px 0 20px;
+    background: url('../i/icon_user.svg') left center no-repeat,
+                url('../i/icon_menu_arrow_down.svg') right center no-repeat;
+    height: 33px;
+    line-height: 33px;
+}
+
+.tor-NavigationBar-userData .tor-NavigationBar-dropdownMenu {
+    display: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.tor-NavigationBar-dropdownMenuItem {
+    padding: 3px 0;
+}
+
+.tor-NavigationBar-userData-menu-open .tor-NavigationBar-dropdownMenu {
+    display: block;
+}
+
+.tor-container {
+    width: 960px;
+    margin: 20px auto;
+    z-index: 1;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #999;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border: none;
+    border-radius: 6px;
+    font: 13px Arial;
+    line-height: 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    padding: 3px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3);
+}
+
+.btn:hover {
+    background-image: -webkit-linear-gradient(top,
+    rgba(255,255,255,0.1) 100%,
+    rgba(0,0,0,0.1) 0%);
+}
+
+.btn:active {
+    background-image: -webkit-linear-gradient(top,
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0) 100%);
+}
+
+.btn-add-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../i/icon_add_withcircle_white.svg') center center no-repeat;
+    background-size: 16px 16px;
+    margin: 0 3px -3px -3px;
+}
+
+.btn-save-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../i/icon_ok.svg') center center no-repeat;
+    background-size: 16px 16px;
+    margin: 0 3px -3px -3px;
+}
+
+.btn-cancel-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../i/icon_delete_withcircle_white.svg') center center no-repeat;
+    background-size: 16px 16px;
+    margin: 0 3px -3px -3px;
+}
+
+.btn_color_green {
+    background-color: #89BA17;
+    color: #fff;
+}
+
+.input-large {
+    border-radius: 6px;
+    font: 13px Arial;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    padding: 0 6px;
+}

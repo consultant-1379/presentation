@@ -1,0 +1,10 @@
+.sortable {
+    cursor: pointer;
+}
+.sortable:hover {
+    background: #f5f5f5;
+}
+.sortable-icon {
+    float: right;
+    display: block;
+}

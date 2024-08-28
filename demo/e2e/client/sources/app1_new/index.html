@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEV: Application</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../web/container/container.css">
+    <script type="text/javascript" src="node_modules/titan/js/titan.js"></script>
+    <script type="text/javascript" src="resources/extension.js"></script>
+    <script type="text/javascript">
+        require({
+            baseUrl:'src'
+        }, ['domReady!', 'tor.application/Application'], function (doc, Application) {
+            var app = new Application({
+                container:'#ApplicationContainer',
+                resourcesUrl:'resources'
+            });
+            app.start();
+        });
+    </script>
+</head>
+<body>
+<div id="eri-fullBlend">&nbsp;</div>
+<div class="tor-navbar">
+    <div class="tor-navbar-logo"></div>
+    <ul class="tor-navbar-pills">
+        <li>
+            <a href="#app1">Start</a>
+        </li>
+    </ul>
+</div>
+<div class="tor-container" id="ApplicationContainer"></div>
+</body>
+</html>

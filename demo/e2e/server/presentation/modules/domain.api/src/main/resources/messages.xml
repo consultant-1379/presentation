@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+    <row id="0">
+        <column1>Value01</column1>
+        <column2>Value02</column2>
+        <column3>Value03</column3>
+        <column4>Value04</column4>
+    </row>
+    <row id="1">
+        <column1>Value11</column1>
+        <column2>Value12</column2>
+        <column3>Value13</column3>
+        <column4>Value14</column4>
+    </row>
+    <row id="2">
+        <column1>Value21</column1>
+        <column2>Value22</column2>
+        <column3>Value23</column3>
+        <column4>Value24</column4>
+    </row>
+    <row id="3">
+        <column1>Value31</column1>
+        <column2>Value32</column2>
+        <column3>Value33</column3>
+        <column4>Value34</column4>
+    </row>
+</messages>

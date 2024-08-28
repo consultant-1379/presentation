@@ -1,0 +1,12 @@
+server: http://159.107.166.95:4224
+
+load:
+  - lib/Jasmine/jasmine.js
+  - lib/JsTestDriver/JasmineAdapter.js
+  - base/base.js
+  - build/main.js
+
+test:
+  - build/specs/suite2.js # please note this file is being cached 
+                       # temporary workaround: change file source to another existing file and change back
+

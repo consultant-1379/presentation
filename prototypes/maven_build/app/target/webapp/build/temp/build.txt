@@ -1,0 +1,12 @@
+
+application/Application.js
+----------------
+template.js
+template!application/pages/main/Main.html
+styles.js
+styles!application/pages/main/Main.less
+application/pages/main/MainView.js
+application/pages/main/Main.js
+application/pages/main/MainPlace.js
+application/pages/places.js
+application/Application.js

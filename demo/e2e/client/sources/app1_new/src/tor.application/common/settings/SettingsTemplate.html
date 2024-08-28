@@ -1,0 +1,19 @@
+<div class="app1New-Settings" style="display: none;">
+    <div class="app1New-Settings-content">
+        <h3 class="app1New-Settings-header">Table settings</h3>
+        <p class="app1New-Settings-description">Reorder columns using the up and down icons</p>
+        <ul data-name="app1NewSelectedSettings" data-type="selected" class="app1New-Settings-list">
+            {{#eachObj model get="columns"}}
+                <li class="app1New-Settings-row app1New-Settings-selected" data-column="{{id}}" data-column-index="{{index}}">
+                    <span class="app1New-Settings-up"></span>
+                    <span class="app1New-Settings-down"></span>
+                    {{title}}
+                    <span class="app1New-Settings-add"></span>
+                    <span class="app1New-Settings-remove"></span>
+                </li>
+            {{/eachObj}}
+        </ul>
+        <ul data-name="app1NewNotSelectedSettings" data-type="not-selected" class="app1New-Settings-list"></ul>
+        <button class="btn app1New-Settings-close" data-action="settings"><span class="btn-cancel-icon"></span>Close</button>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+.app1New {
+
+    &-Settings {
+        @base-url: 'src/tor.application/';
+        @widget-url: 'common/settings/';
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.4);
+
+        &-header {
+            color: #00ABD6;
+            font-weight: normal;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+            z-index: 2
+        }
+
+        &-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 320px;
+            height: 400px;
+            overflow: auto;
+            margin: -200px 0 0 -175px;
+            padding: 15px;
+            z-index: 3;
+            background: white;
+            border: 1px solid #eee;
+            -webkit-box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+            box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        &-list {
+            margin: 0;
+            padding: 0;
+        }
+
+        &-row {
+            position: relative;
+            background: #F4F4F4;
+            color: #00ABD6;
+            margin: 5px 0;
+            padding: 0;
+            list-style-type: none;
+            display: block;
+            padding: 5px 30px 5px 55px;
+        }
+
+        &-selected {
+            background: #00ABD6;
+            color: #fff;
+        }
+
+        &-row .app1New-Settings-add,
+        &-row .app1New-Settings-remove,
+        &-row .app1New-Settings-up,
+        &-row .app1New-Settings-down {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: block;
+            cursor: pointer;
+            background-size: 20px 20px;
+            width: 25px;
+            margin: auto 0;
+        }
+
+        &-row .app1New-Settings-add {
+            right: 0;
+            cursor: pointer;
+            background: url('@{base-url}@{widget-url}images/icon_add_nocircle.svg') center center no-repeat;
+        }
+
+        &-row .app1New-Settings-remove {
+            right: 0;
+            background: url('@{base-url}@{widget-url}images/icon_remove_nocircle.svg') center center no-repeat;
+            display: none;
+        }
+
+        &-row .app1New-Settings-up {
+            left: 0;
+            background: url('@{base-url}@{widget-url}images/icon_up_nocircle.svg') center center no-repeat;
+            display: none;
+        }
+
+        &-row .app1New-Settings-down {
+            left: 25px;
+            background: url('@{base-url}@{widget-url}images/icon_down_nocircle.svg') center center no-repeat;
+            display: none;
+        }
+
+        &-add:hover {
+            background-image: url('@{base-url}@{widget-url}images/icon_add_withcircle.svg');
+        }
+
+        &-remove:hover {
+            background-image: url('@{base-url}@{widget-url}images/icon_remove_withcircle.svg');
+        }
+
+        &-up:hover {
+            background-image: url('@{base-url}@{widget-url}images/icon_up_withcircle.svg');
+        }
+
+        &-down:hover {
+            background-image: url('@{base-url}@{widget-url}images/icon_down_withcircle.svg');
+        }
+
+        &-selected .app1New-Settings-add {
+            display: none;
+        }
+
+        &-selected .app1New-Settings-remove {
+            display: block;
+        }
+
+        &-selected .app1New-Settings-up,
+        &-selected .app1New-Settings-down {
+            display: block;
+        }
+
+        &-selected:first-child .app1New-Settings-up,
+        &-selected:last-child .app1New-Settings-down {
+            display: none;
+        }
+
+        &-row-moving .app1New-Settings-up,
+        &-row-moving .app1New-Settings-down {
+            display: none;
+        }
+
+        &-close {
+            float: right;
+            margin-top: 10px;
+        }
+    }
+
+}

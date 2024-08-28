@@ -1,0 +1,259 @@
+/* General */
+
+html, body {
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+
+}
+
+button, input, textarea, select {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a {
+
+    color: #000;
+    text-decoration: none;
+
+}
+
+a:hover{
+
+    color: #00ABD6;
+    text-decoration: none;
+
+}
+
+
+ul
+{
+
+    padding:0 0 0 0px;
+    margin:0px;
+
+}
+
+/* Main Menu */
+
+.cont-topBar {
+
+    position: relative;
+    width: 100%;
+    height: 30px;
+    z-index: 100;
+    border-top: 4px solid #0066b3;
+
+    background: #e2e1e1;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF), color-stop(1, #e2e1e1));
+    background: -ms-linear-gradient(top, #FFF, #e2e1e1);
+    background: -o-linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+    background: -webkit-linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+    background: -moz-linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+    background: linear-gradient(center top, #FFF 0%, #e2e1e1 100%);
+
+    -webkit-box-shadow: 0 2px 2px #d2d2d2;
+    -moz-box-shadow: 0 2px 2px #d2d2d2;
+    box-shadow: 0 2px 2px #d2d2d2;
+
+}
+
+.cont-topBar::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    font-size: 0;
+    top: -4px;
+    left: 0;
+
+    background: #0066b3;
+    background: -o-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background: -moz-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background: -webkit-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background: -ms-linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0.1, #A2C517), color-stop(0.3, #009046), color-stop(0.5, #0082B6), color-stop(0.7, #151F77), color-stop(1, #DB0050));
+    background: linear-gradient(left, #A2C517 10%, #009046 30%, #0082B6 50%, #151F77 70%, #DB0050 100%);
+}
+
+.cont-topBar-logo {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: url('img/econ01.svg') no-repeat center center transparent;
+    width: 50px;
+    background-size: 20px 20px;
+
+}
+
+.bar-top-topBar {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    list-style: none;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.bar-top-topBar li {
+
+    display: inline-block;
+
+}
+
+.bar-top-topBar a {
+
+    padding: 0 5px 0 15px;
+    margin: 0;
+    font-size: 1em;
+    line-height: 30px;
+    color: #58585a;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.bar-top-topBar a:hover {
+
+    color: #0066B3;
+
+}
+
+/*Temporary logout*/
+.cont-topBar-logout {
+
+    float: right;
+    line-height: 30px;
+    margin: 0 15px;
+    vertical-align: middle;
+    color: #58585a;
+    font-size: 0.8em;
+    background: url(img/icon_user.svg) no-repeat 0 center;
+    padding-left: 20px;
+}
+
+
+
+ .helpContainer {
+
+	 width: 1280px;
+	 margin: 30px auto 30px auto; /* top right bottom left */
+	 padding: 0;
+	 background-color: #F6EB13;
+	 text-align: center;
+
+ }
+
+ .mainBreadcrumb{
+    font-size: 0.9em;
+margin: 8px 0 0 50px; /* top right bottom left */
+display:inline-block;
+
+ }
+
+ .rightItems{
+
+ font-size: 0.9em;
+margin: 2px 20px 0 30px; /* top right bottom left */
+display:inline-block;
+float:right;
+line-height: 30px;
+
+ }
+
+
+/* dropdown menu*/
+
+.dropdown 
+{
+
+margin: 0px -22px 0 0;
+width: 90px;
+position: relative;
+height: 17px;
+text-align:left;
+
+}
+.submenu
+{
+
+position: absolute;
+top: 30px;
+left: -270px;
+z-index: 100;
+width: 335px;
+display: none;
+margin-left: 10px;
+padding: 5px 0 5px;
+border-radius-bottom: 16px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+background-color: #FFF;
+}
+.dropdown li a 
+{
+display: block;
+padding: 6px 10px;
+cursor: pointer;
+text-decoration:none;
+}
+
+.dropdown li a:hover
+{
+background:#dfdfdf;
+color: #000;
+text-decoration: none;
+}
+a.account 
+{
+
+position: absolute;
+z-index: 110;
+display: block;
+padding: 11px 0 0 20px;
+height: 28px;
+width: 121px;
+margin: -11px 0 0 -10px;
+text-decoration: none;
+
+cursor:pointer;
+}
+.root
+{
+    margin:0 0 5px 0;
+list-style:none;
+}
+
+.showMeHow{
+
+ padding: 0 0 10px 15px;
+
+}
+
+.subPadding {
+
+    padding: 0 0 0 10px;
+}
+.userIcon {
+    background: url('img/user_black.svg') no-repeat 0 center transparent;
+    padding-left: 20px;
+}
+
+.helpDropDownIcon {
+    background: url('img/helpArrow.svg') no-repeat 0 center transparent;
+    padding-left: 30px;
+    width:50px;
+}

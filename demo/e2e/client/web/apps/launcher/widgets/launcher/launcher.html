@@ -1,0 +1,104 @@
+<div class="launcher-Launcher">
+    <div class="launcher-groupSelector">
+        <div class="launcher-groupSelector-toolbar">
+        </div>
+        <div class="launcher-groupSelector-list-container">
+            <h2 class="launcher-groupSelector-header">Display</h2>
+            <ul class="launcher-groupSelector-list">
+                <li class="launcher-groupSelector-list-item">
+                    <a class="launcher-groupSelector-list-item-link" data-id="groups" href="#">
+                        <span class="launcher-groupSelector-list-item-groupName">Categories</span>
+                        <span class="launcher-groupSelector-list-item-groupArrow"></span>
+                    </a>
+                </li>
+                <li class="launcher-groupSelector-list-item">
+                    <a class="launcher-groupSelector-list-item-link" data-id="apps" href="#">
+                        <span class="launcher-groupSelector-list-item-groupName">A-Z</span>
+                        <span class="launcher-groupSelector-list-item-groupArrow"></span>
+                    </a>
+                </li>
+                <li class="launcher-groupSelector-list-item launcher-groupSelector-list-item-favorites">
+                    <a class="launcher-groupSelector-list-item-link launcher-groupSelector-list-item-link-favorites" data-id="favorites" href="#">
+                        <span class="launcher-groupSelector-list-item-groupName">Favorites</span>
+                        <span class="launcher-groupSelector-list-item-groupArrow"></span>
+                    </a>
+                </li>
+                <%
+                _.each(collection.toJSON(), function(group) {
+                %>
+                <!--<li class="launcher-groupSelector-list-item">
+                    <a class="launcher-groupSelector-list-item-link" data-id="<%- group.id %>" href="#">
+                        <span class="launcher-groupSelector-list-item-groupIcon"></span>
+                        <span class="launcher-groupSelector-list-item-groupName"><%- group.label %></span>
+                        <span class="launcher-groupSelector-list-item-groupArrow"></span>
+                    </a>
+                </li>-->
+                <%
+                });
+                %>
+            </ul>
+        </div>
+    </div>
+    <div class="launcher-appSelector">
+        <div class="launcher-appSelector-toolbar">
+            <input type="button" class="launcher-appSelector-toolbar-searchIcon" /><input type="text" class="launcher-appSelector-toolbar-searchInput" />
+        </div>
+        <div class="launcher-appSelector-container">
+            <div class="launcher-appSelector-list">
+                <%
+                    if (appsLoaded) {
+                        var i = 0;
+                        _.each(collection.toJSON(), function(item) {
+                            var faveClass = "";
+                            if (item.apps == undefined)
+                            {
+                                if (item.favorite) {
+                                    faveClass = " launcher-appSelector-list-item-faveIcon-favorited";
+                                }
+                                %>
+                                <div class="launcher-appSelector-list-item">
+                                    <span class="launcher-appSelector-list-item-link" data-app-index="<%- i %>" data-app-id="<%- item.id %>">
+                                        <a href="#" class="launcher-appSelector-list-item-faveIcon<%- faveClass %>"></a>
+                                        <a href="#" class="launcher-appSelector-list-item-label"><%- item.label %></a>
+                                        <a href="#" class="launcher-appSelector-list-item-infoIcon"></a>
+                                    </span>
+                                </div>
+                                <%
+                                i++;
+                            } else {
+                                if (item.id != "favorites") {
+                                %>
+                                <div class="launcher-appSelector-list-header">
+                                    <%- item.label %>
+                                </div>
+                                <%
+                                }
+                                _.each(item.apps, function(app) {
+                                    var faveClass = "";
+                                    if (app.favorite) {
+                                        faveClass = " launcher-appSelector-list-item-faveIcon-favorited";
+                                    }
+                                    %>
+                                    <div class="launcher-appSelector-list-item">
+                                        <span class="launcher-appSelector-list-item-link" data-app-index="<%- i %>" data-app-id="<%- app.id %>">
+                                            <a href="#" class="launcher-appSelector-list-item-faveIcon<%- faveClass %>"></a>
+                                            <a href="#" class="launcher-appSelector-list-item-label"><%- app.label %></a>
+                                            <a href="#" class="launcher-appSelector-list-item-infoIcon"></a>
+                                        </span>
+                                    </div>
+                                    <%
+                                    i++;
+                                });
+                            }
+                        });
+                    }
+                %>
+            </ul>
+        </div>
+    </div>
+    <div class="launcher-appDetails">
+        <span class="launcher-appDetails-close">&times;</span>
+        <h2 class="launcher-appDetails-title"></h2>
+        <img src="i/app_details.png" />
+    </div>
+</div>

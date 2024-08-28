@@ -1,0 +1,1 @@
+DUMMY FILE TO PROVOKE COPY of tis directory to target VIA maven-resources-plugin

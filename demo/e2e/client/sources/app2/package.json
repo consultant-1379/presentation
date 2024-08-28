@@ -1,0 +1,12 @@
+{
+    "name":"app2",
+    "version":"0.0.1",
+    "dependencies":{
+        "base": "http://localhost/e2e/registry/base-0.0.1.tgz"
+    },
+    "metadata":{
+        "name":"app2",
+        "hash":"app2",
+        "label":"App 2"
+    }
+}
